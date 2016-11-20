@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="#F5F2DA">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:maxHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+
+        android:layout_alignParentTop="true"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:gravity="start"
+            android:scaleType="fitStart"
+            android:adjustViewBounds="true"/>
+    </android.support.v7.widget.Toolbar>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/main_banner"
+        android:id="@+id/imageView2"
+        android:gravity="top"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:layout_below="@id/toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:id="@+id/firstline">
+
+        <com.example.last_make.SquareButton
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FB504F"
+            android:text="빨강"
+            android:textColor="@android:color/white"
+            android:id="@+id/color_main_red"/>
+        <com.example.last_make.SquareButton
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FCBB4A"
+            android:text="주황"
+            android:textColor="@android:color/white"
+            android:id="@+id/color_main_orange"/>
+        <com.example.last_make.SquareButton
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F0D545"
+            android:text="노랑"
+            android:textColor="@android:color/white"
+            android:id="@+id/color_main_yellow"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/firstline"
+        android:id="@+id/secondline">
+        <com.example.last_make.SquareButton
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#A2CE4A"
+            android:text="초록"
+            android:textColor="@android:color/white"
+            android:id="@+id/color_main_green"/>
+        <com.example.last_make.SquareButton
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#58CCF1"
+            android:text="파랑"
+            android:textColor="@android:color/white"
+            android:id="@+id/color_main_blue"/>
+        <com.example.last_make.SquareButton
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:text="색상선택"
+            android:textColor="@android:color/white"
+            android:id="@+id/color_main_choose"
+            android:padding="30dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/secondline"
+        android:id="@+id/proggroup">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/brightness"/>
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/brightness2"/>
+    </LinearLayout>
+</RelativeLayout>
